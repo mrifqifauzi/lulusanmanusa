@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Pengumuman Kelulusan</title>
-    
+
     <!-- Tailwind CSS (CDN for preview/static hosting) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Lucide Icons (CDN) -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -17,7 +18,9 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI',
+                            'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'
+                        ],
                     },
                     animation: {
                         blob: "blob 7s infinite",
@@ -42,28 +45,45 @@
             }
         }
     </script>
-    
+
     <style>
         /* Smooth base transitions */
-        .app-transition { transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-        .animation-delay-2000 { animation-delay: 2s; }
-        .animation-delay-4000 { animation-delay: 4s; }
+        .app-transition {
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
     </style>
 </head>
-<body class="min-h-screen bg-slate-50 flex flex-col justify-center items-center p-4 font-sans text-slate-800 selection:bg-indigo-200 selection:text-indigo-900 overflow-x-hidden">
+
+<body
+    class="min-h-screen bg-slate-50 flex flex-col justify-center items-center p-4 font-sans text-slate-800 selection:bg-indigo-200 selection:text-indigo-900 overflow-x-hidden">
 
     <!-- Trendy Animated Background Blobs -->
     <div class="fixed inset-0 w-full h-full flex justify-center items-center overflow-hidden -z-10 pointer-events-none">
-        <div class="absolute top-[10%] left-[20%] w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob"></div>
-        <div class="absolute top-[20%] right-[20%] w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-[20%] left-[30%] w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob animation-delay-4000"></div>
+        <div
+            class="absolute top-[10%] left-[20%] w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob">
+        </div>
+        <div
+            class="absolute top-[20%] right-[20%] w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute bottom-[20%] left-[30%] w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-blob animation-delay-4000">
+        </div>
         <div class="absolute inset-0 bg-white/40 backdrop-blur-[100px]"></div>
     </div>
 
     <!-- ==================== BAGIAN LOGIN ==================== -->
     <div id="login-section" class="w-full max-w-md app-transition translate-y-0 opacity-100 z-10 relative">
         <div class="text-center mb-8">
-            <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-xl shadow-indigo-500/30 mb-5 relative transform hover:scale-105 transition-transform duration-300">
+            <div
+                class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-xl shadow-indigo-500/30 mb-5 relative transform hover:scale-105 transition-transform duration-300">
                 <div class="absolute inset-0 bg-white opacity-20 rounded-3xl mix-blend-overlay"></div>
                 <i data-lucide="school" class="w-10 h-10 text-white z-10 relative"></i>
             </div>
@@ -72,16 +92,19 @@
         </div>
 
         <!-- Glassmorphism Card -->
-        <div class="bg-white/70 rounded-3xl shadow-2xl shadow-indigo-500/10 p-8 sm:p-10 border border-white backdrop-blur-xl">
+        <div
+            class="bg-white/70 rounded-3xl shadow-2xl shadow-indigo-500/10 p-8 sm:p-10 border border-white backdrop-blur-xl">
             <h2 class="text-xl font-semibold text-slate-800 mb-6 text-center">Masuk ke Akun Anda</h2>
-            
+
             <form id="login-form" class="space-y-6">
                 <!-- Input NIS -->
                 <div class="space-y-2">
                     <label class="text-sm font-semibold text-slate-700 block" for="nis">Nomor Induk Siswa</label>
                     <div class="relative group">
-                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-indigo-600">
-                            <i data-lucide="user" class="h-5 w-5 text-slate-400 group-focus-within:text-indigo-500 transition-colors"></i>
+                        <div
+                            class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-indigo-600">
+                            <i data-lucide="user"
+                                class="h-5 w-5 text-slate-400 group-focus-within:text-indigo-500 transition-colors"></i>
                         </div>
                         <input id="nis" type="text" required
                             class="block w-full pl-12 pr-4 py-3.5 bg-white/60 border border-indigo-100 rounded-2xl text-sm focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-400 transition-all outline-none shadow-sm"
@@ -93,8 +116,10 @@
                 <div class="space-y-2">
                     <label class="text-sm font-semibold text-slate-700 block" for="password">Kata Sandi</label>
                     <div class="relative group">
-                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-indigo-600">
-                            <i data-lucide="lock" class="h-5 w-5 text-slate-400 group-focus-within:text-indigo-500 transition-colors"></i>
+                        <div
+                            class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-indigo-600">
+                            <i data-lucide="lock"
+                                class="h-5 w-5 text-slate-400 group-focus-within:text-indigo-500 transition-colors"></i>
                         </div>
                         <input id="password" type="password" required
                             class="block w-full pl-12 pr-4 py-3.5 bg-white/60 border border-indigo-100 rounded-2xl text-sm focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-400 transition-all outline-none shadow-sm"
@@ -103,7 +128,8 @@
                 </div>
 
                 <!-- Error Message (Hidden by default) -->
-                <div id="error-box" class="hidden p-4 bg-rose-50 border border-rose-200 rounded-2xl flex items-center gap-3 text-rose-600 text-sm animate-pulse shadow-sm">
+                <div id="error-box"
+                    class="hidden p-4 bg-rose-50 border border-rose-200 rounded-2xl flex items-center gap-3 text-rose-600 text-sm animate-pulse shadow-sm">
                     <i data-lucide="x-circle" class="w-5 h-5 shrink-0 text-rose-500"></i>
                     <p class="font-medium">NIS atau Password yang Anda masukkan salah.</p>
                 </div>
@@ -111,35 +137,41 @@
                 <!-- Submit Button -->
                 <button type="submit" id="submit-btn"
                     class="w-full flex justify-center items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-4 px-6 rounded-2xl text-sm font-bold transition-all duration-300 shadow-lg shadow-indigo-500/30 active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed mt-4">
-                    
+
                     <span id="btn-text" class="flex items-center gap-2">
                         Lihat Hasil Kelulusan <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </span>
-                    
+
                     <span id="btn-spinner" class="hidden flex items-center gap-2">
-                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                            </path>
                         </svg>
                         Memverifikasi...
                     </span>
                 </button>
             </form>
-            
+
             <div class="mt-8 text-center border-t border-indigo-100/50 pt-6">
                 <p class="text-xs text-slate-500 font-medium">
-                    Gunakan NIS & Password dari pihak sekolah.<br/>
+                    Gunakan NIS & Password dari pihak sekolah.<br />
                 </p>
             </div>
         </div>
     </div>
 
     <!-- ==================== BAGIAN HASIL KELULUSAN ==================== -->
-    <div id="result-section" class="hidden w-full max-w-2xl app-transition translate-y-12 opacity-0 scale-95 z-10 relative">
-        
+    <div id="result-section"
+        class="hidden w-full max-w-2xl app-transition translate-y-12 opacity-0 scale-95 z-10 relative">
+
         <div class="flex justify-between items-center mb-6 px-2">
             <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center border border-indigo-50">
+                <div
+                    class="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center border border-indigo-50">
                     <i data-lucide="school" class="w-6 h-6 text-indigo-600"></i>
                 </div>
                 <div>
@@ -147,54 +179,83 @@
                     <p class="text-xs text-indigo-600 font-medium">Tahun Ajaran 2025/2026</p>
                 </div>
             </div>
-            
-            <button id="logout-btn" class="flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-600 font-medium bg-white px-5 py-2.5 rounded-full border border-indigo-50 shadow-md hover:shadow-lg transition-all cursor-pointer">
+
+            <button id="logout-btn"
+                class="flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-600 font-medium bg-white px-5 py-2.5 rounded-full border border-indigo-50 shadow-md hover:shadow-lg transition-all cursor-pointer">
                 <i data-lucide="log-out" class="w-4 h-4"></i>
                 <span class="hidden sm:inline">Keluar</span>
             </button>
         </div>
 
-        <div class="bg-white/90 backdrop-blur-xl rounded-[2rem] shadow-2xl shadow-indigo-500/10 overflow-hidden border border-white relative">
-            
+        <div
+            class="bg-white/90 backdrop-blur-xl rounded-[2rem] shadow-2xl shadow-indigo-500/10 overflow-hidden border border-white relative">
+
             <!-- Garis Aksen Warna di Atas Dokumen (Dinamis dari JS) -->
             <div id="doc-accent" class="h-3 w-full absolute top-0 left-0 bg-emerald-500"></div>
 
             <div class="relative pt-10 pb-4 px-6 sm:px-12 flex flex-col items-center text-center">
-                
+
                 <!-- KOP SURAT SEKOLAH -->
-                <div class="w-full flex flex-col sm:flex-row items-center gap-5 border-b-[3px] border-slate-800 pb-5 mb-8">
-                    <div class="w-24 h-24 shrink-0 rounded-full border-4 border-indigo-100 flex items-center justify-center bg-white shadow-inner">
-                        <i data-lucide="school" class="w-12 h-12 text-indigo-700"></i>
+                <div
+                    class="w-full flex flex-col sm:flex-row items-center gap-5 border-b-[3px] border-slate-800 pb-5 mb-8">
+                    <div
+                        class="w-full flex flex-col sm:flex-row items-center gap-5 border-b-[3px] border-slate-800 pb-5 mb-8">
+                        <div
+                            class="w-24 h-24 shrink-0 rounded-full border-4 border-indigo-100 flex items-center justify-center bg-white shadow-inner overflow-hidden">
+                            <img src="logolp.png" alt="Logo SMK Ma'arif NU 1 Ajibarang"
+                                class="w-20 h-20 object-contain">
+                        </div>
+
+                        <div class="text-center sm:text-left flex-1">
+                            <h1 class="font-black text-2xl sm:text-3xl tracking-wide text-slate-900" id="school-name">
+                                SMK MA'ARIF NU 1 AJIBARANG</h1>
+                            <p class="text-sm text-slate-600 mt-1 font-medium" id="school-address">Jl. Raya Ajibarang
+                                KM. 1, AJibarang</p>
+                            <p class="text-xs text-indigo-600 font-semibold mt-1" id="school-contact">Telp: (0281)
+                                571284 | Email: smkmaarif_ajibarang@yahoo.co.id</p>
+                        </div>
                     </div>
                     <div class="text-center sm:text-left flex-1">
-                        <h1 class="font-black text-2xl sm:text-3xl tracking-wide text-slate-900" id="school-name">SMK MA'ARIF NU 1 AJIBARANG</h1>
-                        <p class="text-sm text-slate-600 mt-1 font-medium" id="school-address">Jl. Raya Ajibarang KM. 1, AJibarang</p>
-                        <p class="text-xs text-indigo-600 font-semibold mt-1" id="school-contact">Telp: (0281) 571284 | Email: smkmaarif_ajibarang@yahoo.co.id</p>
+                        <h1 class="font-black text-2xl sm:text-3xl tracking-wide text-slate-900" id="school-name">SMK
+                            MA'ARIF NU 1 AJIBARANG</h1>
+                        <p class="text-sm text-slate-600 mt-1 font-medium" id="school-address">Jl. Raya Ajibarang KM.
+                            1, AJibarang</p>
+                        <p class="text-xs text-indigo-600 font-semibold mt-1" id="school-contact">Telp: (0281) 571284
+                            | Email: smkmaarif_ajibarang@yahoo.co.id</p>
                     </div>
                 </div>
 
                 <!-- JUDUL SURAT -->
                 <div class="mb-8 text-center">
-                    <h2 class="text-xl font-bold text-slate-900 uppercase tracking-widest underline underline-offset-8 decoration-4 decoration-indigo-500">Surat Keterangan Kelulusan</h2>
+                    <h2
+                        class="text-xl font-bold text-slate-900 uppercase tracking-widest underline underline-offset-8 decoration-4 decoration-indigo-500">
+                        Surat Keterangan Kelulusan</h2>
                     <p class="text-sm font-medium text-slate-500 mt-4">Nomor: 421.3/050/SMKN1/2026</p>
                 </div>
 
                 <!-- Data Siswa -->
-                <div class="w-full max-w-md bg-white rounded-3xl p-6 sm:p-8 shadow-lg shadow-indigo-500/5 border border-indigo-50 mb-8 text-left relative overflow-hidden group hover:shadow-indigo-500/10 transition-shadow">
+                <div
+                    class="w-full max-w-md bg-white rounded-3xl p-6 sm:p-8 shadow-lg shadow-indigo-500/5 border border-indigo-50 mb-8 text-left relative overflow-hidden group hover:shadow-indigo-500/10 transition-shadow">
                     <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-indigo-400 to-purple-500"></div>
-                    <h3 class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4 border-b border-indigo-50 pb-3">Biodata Siswa</h3>
-                    
+                    <h3
+                        class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4 border-b border-indigo-50 pb-3">
+                        Biodata Siswa</h3>
+
                     <div class="grid grid-cols-[60px_10px_1fr] sm:grid-cols-[80px_10px_1fr] gap-y-4 text-sm">
-                        <div class="text-slate-500 font-semibold">Nama</div><div class="text-slate-400">:</div>
+                        <div class="text-slate-500 font-semibold">Nama</div>
+                        <div class="text-slate-400">:</div>
                         <div class="text-slate-900 font-bold text-base" id="res-name">-</div>
 
-                        <div class="text-slate-500 font-semibold">NIS</div><div class="text-slate-400">:</div>
+                        <div class="text-slate-500 font-semibold">NIS</div>
+                        <div class="text-slate-400">:</div>
                         <div class="text-slate-800 font-semibold" id="res-nis">-</div>
 
-                        <div class="text-slate-500 font-semibold">NISN</div><div class="text-slate-400">:</div>
+                        <div class="text-slate-500 font-semibold">NISN</div>
+                        <div class="text-slate-400">:</div>
                         <div class="text-slate-800 font-semibold" id="res-nisn">-</div>
 
-                        <div class="text-slate-500 font-semibold">Kelas</div><div class="text-slate-400">:</div>
+                        <div class="text-slate-500 font-semibold">Kelas</div>
+                        <div class="text-slate-400">:</div>
                         <div class="text-slate-800 font-semibold inline-flex items-center gap-2">
                             <span id="res-class">-</span>
                             <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
@@ -204,13 +265,16 @@
 
                 <!-- Pesan Keputusan -->
                 <div class="w-full max-w-lg">
-                    <p class="text-xs text-slate-500 mb-3 uppercase tracking-widest font-bold">Memutuskan Bahwa Siswa Tersebut Dinyatakan:</p>
-                    <div id="res-status-text" class="text-5xl sm:text-6xl font-black mb-8 tracking-tighter text-emerald-500 drop-shadow-sm">
+                    <p class="text-xs text-slate-500 mb-3 uppercase tracking-widest font-bold">Memutuskan Bahwa Siswa
+                        Tersebut Dinyatakan:</p>
+                    <div id="res-status-text"
+                        class="text-5xl sm:text-6xl font-black mb-8 tracking-tighter text-emerald-500 drop-shadow-sm">
                         LULUS
                     </div>
-                    
+
                     <div class="bg-indigo-50/50 rounded-3xl p-6 sm:p-8 border border-indigo-100 mt-8 relative">
-                        <i data-lucide="quote" class="absolute -top-4 -left-4 w-10 h-10 text-indigo-200 fill-indigo-200"></i>
+                        <i data-lucide="quote"
+                            class="absolute -top-4 -left-4 w-10 h-10 text-indigo-200 fill-indigo-200"></i>
                         <p class="text-slate-700 leading-relaxed font-medium text-lg relative z-10" id="res-message">
                             "Pesan dari sekolah"
                         </p>
@@ -224,24 +288,30 @@
                 <div class="text-center relative w-64">
                     <p class="text-sm font-medium text-slate-700 mb-1">Ajibarang, 5 Mei 2026</p>
                     <p class="text-sm font-bold text-slate-900">Kepala Sekolah</p>
-                    
+
                     Visual Stempel & Tanda Tangan
                     <div class="relative h-32 my-4 flex items-center justify-center">
                         <div class="absolute z-10 opacity-80" style="transform: rotate(-5deg);">
                             <svg viewBox="0 0 200 100" class="w-40 h-24">
-                                <path d="M 30 70 C 40 30, 60 20, 70 50 C 80 80, 90 40, 110 40 C 130 40, 120 70, 140 70 C 150 70, 160 50, 170 50 C 180 50, 180 60, 190 70" stroke="#4338ca" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M 50 60 C 80 50, 120 60, 160 50" stroke="#4338ca" stroke-width="1.5" fill="none" stroke-linecap="round" />
+                                <path
+                                    d="M 30 70 C 40 30, 60 20, 70 50 C 80 80, 90 40, 110 40 C 130 40, 120 70, 140 70 C 150 70, 160 50, 170 50 C 180 50, 180 60, 190 70"
+                                    stroke="#4338ca" stroke-width="2.5" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M 50 60 C 80 50, 120 60, 160 50" stroke="#4338ca" stroke-width="1.5"
+                                    fill="none" stroke-linecap="round" />
                             </svg>
                         </div>
                     </div>
 
-                    <p class="text-base font-bold text-slate-900 underline underline-offset-4" id="res-principal">Dr. H. Budi Santoso, M.Pd.</p>
-                    <p class="text-xs font-semibold text-indigo-600 mt-2" id="res-nip">NIP. 19700101 199512 1 001</p>
+                    <p class="text-base font-bold text-slate-900 underline underline-offset-4" id="res-principal">Tosirin, S.Pd</p>
+                    <p class="text-xs font-semibold text-indigo-600 mt-2" id="res-nip">NIP. -
+                    </p>
                 </div>
             </div>
 
             <!-- Footer Surat Info -->
-            <div class="bg-indigo-50/80 px-8 py-5 border-t border-indigo-100 flex justify-center text-sm font-semibold text-indigo-700">
+            <div
+                class="bg-indigo-50/80 px-8 py-5 border-t border-indigo-100 flex justify-center text-sm font-semibold text-indigo-700">
                 <div class="flex items-center gap-2">
                     <i data-lucide="shield-check" class="w-5 h-5 text-emerald-500"></i>
                     <span>Dokumen Kelulusan Resmi Digital</span>
@@ -273,10 +343,33 @@
         };
 
         // Data Siswa (Simulasi Database)
-        const STUDENT_DB = [
-            { nis: '1001', nisn: '0051234567', password: '123', name: 'Ahmad Hidayat', class: 'XII RPL 1', status: 'Lulus', message: 'Selamat! Anda telah menyelesaikan pendidikan dengan baik. Teruslah berkarya dan raih cita-citamu.' },
-            { nis: '1002', nisn: '0057654321', password: '123', name: 'Siti Aminah', class: 'XII TKJ 2', status: 'Lulus', message: 'Selamat atas kelulusanmu! Semoga ilmu yang didapat berkah dan bermanfaat untuk masa depan.' },
-            { nis: '1003', nisn: '0061122334', password: '123', name: 'Budi Perkasa', class: 'XII AKL 1', status: 'Tidak Lulus', message: 'Mohon maaf, Anda belum memenuhi kriteria kelulusan tahun ini. Tetap semangat dan jangan menyerah.' }
+        const STUDENT_DB = [{
+                nis: '1001',
+                nisn: '0051234567',
+                password: '123',
+                name: 'Ahmad Hidayat',
+                class: 'XII RPL 1',
+                status: 'Lulus',
+                message: 'Selamat! Anda telah menyelesaikan pendidikan dengan baik. Teruslah berkarya dan raih cita-citamu.'
+            },
+            {
+                nis: '1002',
+                nisn: '0057654321',
+                password: '123',
+                name: 'Siti Aminah',
+                class: 'XII TKJ 2',
+                status: 'Lulus',
+                message: 'Selamat atas kelulusanmu! Semoga ilmu yang didapat berkah dan bermanfaat untuk masa depan.'
+            },
+            {
+                nis: '1003',
+                nisn: '0061122334',
+                password: '123',
+                name: 'Budi Perkasa',
+                class: 'XII AKL 1',
+                status: 'Tidak Lulus',
+                message: 'Mohon maaf, Anda belum memenuhi kriteria kelulusan tahun ini. Tetap semangat dan jangan menyerah.'
+            }
         ];
 
         // Elemen DOM
@@ -299,7 +392,7 @@
         // Event Submit Login
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const nisInput = document.getElementById('nis').value;
             const passwordInput = document.getElementById('password').value;
 
@@ -319,7 +412,7 @@
                     document.getElementById('res-nis').textContent = user.nis;
                     document.getElementById('res-nisn').textContent = user.nisn;
                     document.getElementById('res-class').textContent = user.class;
-                    
+
                     const statusText = document.getElementById('res-status-text');
                     const docAccent = document.getElementById('doc-accent');
                     const messageEl = document.getElementById('res-message');
@@ -329,11 +422,15 @@
 
                     // Warna Tema berdasarkan Status
                     if (user.status === 'Lulus') {
-                        statusText.className = 'text-5xl sm:text-6xl font-black mb-8 tracking-tighter text-emerald-500 drop-shadow-sm';
-                        docAccent.className = 'h-3 w-full absolute top-0 left-0 bg-gradient-to-r from-emerald-400 to-teal-500';
+                        statusText.className =
+                            'text-5xl sm:text-6xl font-black mb-8 tracking-tighter text-emerald-500 drop-shadow-sm';
+                        docAccent.className =
+                            'h-3 w-full absolute top-0 left-0 bg-gradient-to-r from-emerald-400 to-teal-500';
                     } else {
-                        statusText.className = 'text-5xl sm:text-6xl font-black mb-8 tracking-tighter text-rose-500 drop-shadow-sm';
-                        docAccent.className = 'h-3 w-full absolute top-0 left-0 bg-gradient-to-r from-rose-400 to-red-500';
+                        statusText.className =
+                            'text-5xl sm:text-6xl font-black mb-8 tracking-tighter text-rose-500 drop-shadow-sm';
+                        docAccent.className =
+                            'h-3 w-full absolute top-0 left-0 bg-gradient-to-r from-rose-400 to-red-500';
                     }
 
                     // Transisi Animasi: Hilangkan Login Form
@@ -345,10 +442,11 @@
                     setTimeout(() => {
                         loginSection.classList.add('hidden');
                         resultSection.classList.remove('hidden');
-                        
+
                         // Beri jeda sangat sedikit agar display block merender sebelum animasi play
                         setTimeout(() => {
-                            resultSection.classList.replace('translate-y-12', 'translate-y-0');
+                            resultSection.classList.replace('translate-y-12',
+                                'translate-y-0');
                             resultSection.classList.replace('opacity-0', 'opacity-100');
                             resultSection.classList.replace('scale-95', 'scale-100');
                         }, 50);
@@ -378,11 +476,11 @@
             setTimeout(() => {
                 resultSection.classList.add('hidden');
                 loginSection.classList.remove('hidden');
-                
+
                 // Reset form inputs
                 document.getElementById('nis').value = '';
                 document.getElementById('password').value = '';
-                
+
                 setTimeout(() => {
                     loginSection.classList.replace('-translate-y-8', 'translate-y-0');
                     loginSection.classList.replace('opacity-0', 'opacity-100');
@@ -390,7 +488,7 @@
                 }, 50);
             }, 700);
         });
-
     </script>
 </body>
+
 </html>
